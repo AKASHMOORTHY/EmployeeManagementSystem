@@ -1,0 +1,14 @@
+*.pyc
+__pycache__/
+db.sqlite3
+media/
+.env
+*.log
+*.pot
+*.mo
+*.bak
+*.swp
+*.tar.gz
+*.egg-info/
+.vscode/
+staticfiles/
