@@ -31,7 +31,13 @@ def login_view(request):
 
 def employee_list(request):
     employees = Employee.objects.all()  # Fetch all employees
-    return render(request, 'employee_list.html', {'employees': employees})
+    payrolls = Payroll.objects.all()  # Fetch all payrolls
+    attendances = Attendance.objects.all()  # Fetch all attendances
+    return render(request, 'employee_list.html', {
+        'employees': employees, 
+        'payrolls': payrolls, 
+        'attendances': attendances
+    })
 
 def employee_detail(request, pk):
     employee = get_object_or_404(Employee, pk=pk)  # Get employee by primary key (ID)
